@@ -1,7 +1,7 @@
 {
   "name": "expo-router-nativewind-skia-template",
   "main": "src/index",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Kim Chouard",
   "scripts": {
     "start": "expo start",
@@ -11,7 +11,7 @@
     "android-build": "expo run:android",
     "ios-build": "expo run:ios",
     "test": "jest --watchAll",
-    "postinstall": "yarn setup-skia-web \"public\" && node canvaskit-wasm-postinstall-fs-path.js && node rn-skia-bugfix.js && npx tailwindcss -i ./global.css -o ./node_modules/.cache/nativewind/global.css.web.css"
+    "postinstall": "yarn setup-skia-web && npx tailwindcss -i ./global.css -o ./node_modules/.cache/nativewind/global.css.web.css"
   },
   "jest": {
     "preset": "jest-expo"
@@ -19,7 +19,7 @@
   "dependencies": {
     "@expo/vector-icons": "^14.0.0",
     "@react-navigation/native": "^6.0.2",
-    "@shopify/react-native-skia": "^0.1.238",
+    "@shopify/react-native-skia": "^0.1.240",
     "clsx": "^2.1.0",
     "expo": "~50.0.6",
     "expo-font": "~11.10.2",

@@ -9,7 +9,7 @@ import { renderRootComponent } from 'expo-router/build/renderRootComponent';
 import { LoadSkiaWeb } from '@shopify/react-native-skia/lib/module/web';
 
 LoadSkiaWeb({
-  locateFile: (file) => `/static/js/${file}`,
+  locateFile: (file) => `${file}`, // or `node_modules/canvaskit-wasm/bin/full/canvaskit.wasm` to load it directly from node_modules
 }).then(async () => {
   renderRootComponent(App);
 });
