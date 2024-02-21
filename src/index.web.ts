@@ -9,7 +9,8 @@ import { renderRootComponent } from 'expo-router/build/renderRootComponent';
 import { LoadSkiaWeb } from '@shopify/react-native-skia/lib/module/web';
 
 LoadSkiaWeb({
-  locateFile: (file) => `${file}`, // or `node_modules/canvaskit-wasm/bin/full/canvaskit.wasm` to load it directly from node_modules
+  locateFile: (file) => `${file}`, // load CanvasKit from the `/public/canvaskit.wasm` URL
+  // Note: Can also use `node_modules/canvaskit-wasm/bin/full/canvaskit.wasm` to load it directly from node_modules
 }).then(async () => {
   renderRootComponent(App);
 });
